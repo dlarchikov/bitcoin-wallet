@@ -19,7 +19,7 @@ Copy target.example.json to target.json. Edit target addresses and amounts.
 
 Run:
 ```
-yarn wallet
+yarn wallet cSnZPhCjCWwr5KPbpiqquEPfgJCqrbB3eEnD3cFGNq8z
 ```
 
 ###

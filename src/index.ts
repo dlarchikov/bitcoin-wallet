@@ -35,7 +35,7 @@ if (!fileExists && !to) {
 if (fileExists) {
 	targets = JSON.parse(fs.readFileSync('./target.json').toString()).map(i => ({
 		...i,
-		amount: Number(new Big(i.amount || 0).mul(10 ** 8).toString())
+		value: Number(new Big(i.value || 0).mul(10 ** 8).toString())
 	}))
 }
 
@@ -43,6 +43,7 @@ const keyPair = ECPairFactory(ecc).fromWIF(privateKey, bitcoin.networks.regtest)
 const { address } = bitcoin.payments.p2wpkh({ pubkey: keyPair.publicKey, network: bitcoin.networks.regtest })
 
 console.log(`[Address]: ${address}`)
+console.log(`[Targets]: ${JSON.stringify(targets)}`)
 
 async function bootstrap() {
 	const result = await fetch(rpc, {
