@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": false,
+        "sourceMap": true,
+        "skipLibCheck": true,
+        "allowJs": false,
+        "checkJs": false,
+        "types": ["node"],
+        "outDir": "./dist",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "incremental": true,
+        "pretty": true,
+        "lib": ["esnext"],
+        "baseUrl": "./src",
+        "paths": {}
+    },
+    "include": ["src/main.ts", "src/migration/**/*.ts"],
+    "exclude": ["node_modules", "test", "src/tests", "dist", "**/*spec.ts"]
+}
